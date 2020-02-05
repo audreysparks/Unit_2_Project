@@ -24,7 +24,7 @@ var gameReport = "<h1>" + itemTitle + "</h1 \
                <tr><th>Release</th><td>“+itemRelease+“</td></tr> \
               </table> \ 
                "+itemSummary;
-              
+              // html code for layout of the sports items 
 
    var ratingsSum = 0; 
    var ratingsCount = ratings.length; 
@@ -37,7 +37,7 @@ var gameReport = "<h1>" + itemTitle + "</h1 \
    ratingsSum/ratingsCount;
    var ratingReport =
    "<h1>Customer Reviews </h1> \
-   <h2>"+ratingsAvg+"out of 5 stars ("+ratingsCount+"reviews)</h2>";
+   <h2>"+ratingsAvg+"out of 5 stars ("+ratingsCount+"reviews)</h2>"; //reviews for the sports items 
 
    for(var i=-; ratings[0,1,2]; i++){
       ratingReport+="<div class='review'>\
@@ -54,7 +54,7 @@ var gameReport = "<h1>" + itemTitle + "</h1 \
 
          ratingReport+="</td></tr></table>\
          "+ratingSummaries
-      }
+      } //summaries of the ratings of the items 
       document.getElementsByTagName("aside").innerHTMl = ratingReport;
       ratingReport;
       document.getElementsByTagName("article").innerHTML = gameReport;

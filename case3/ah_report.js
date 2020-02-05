@@ -61,3 +61,26 @@ function writeDonorRow(value) {
    donorTable += "</tr>";
 }
 
+var donationTable = [0];
+
+
+var summaryTable = "<table>" \
+ "<tr><th>" + Donors + "</th></td>" \
+ "<tr><th>" + Total Donations + "</th><td>"+$total+"</td></tr>" \
+ "</table>" ;
+toLocaleString();
+ document.getElementsByTagName("div").innerHTMl = donationSummary;
+ summaryTable;
+
+ filter();
+ findMajor();
+
+ var majorDonors = sort();
+ donorSortDescending();
+
+ var donorTable = "<table>" \
+  "<caption>" + Major Donors + "</caption>" \
+  "<tr>" 
+  "<th>" + Donation + "</th><th>" + Donor ID + "</th>" \
+  "<th>" + Date + "</th><th>" + Name "</th><th>" + Adress "</th>" \ 
+  "<th>"
