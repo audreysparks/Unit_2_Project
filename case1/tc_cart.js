@@ -19,4 +19,14 @@ var cartHTML = "<table>" + "<tr>" + "<th>" + "item" + "</th>" + "<th>" + "Descri
  for(var i =0; i < cartHTML ; i ++){
     cartHTML+="<tr>" + "<td>" + "<img src='tc_item.png' alt='item' />" + "</td>";
  }
+ var cartHTML = "<td>" + "description" + "</td>" + "<td>" + "$price" + "</td>" + "<td>" + "quanity" + "</td>";
+
+ var itemCost = price() * quanity();
+
+ var cartHTML = "<tr>" + "<td colspan= '4'>" + "subtotal" + "</td>" + "<td>" + "$total" + "</td>" + "</tr>" + "</table>";
+
+ document.getElementById("cartHTML").innerHTML;
+
+
+
 
