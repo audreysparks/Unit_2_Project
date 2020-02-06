@@ -30,8 +30,8 @@ for(var i = 0; i<race.length; i++){
    var totalVotes = 0;
 
 
-   votes[i].forEach(calcSum);
-
+   votes[i].forEach(calcSum); 
+//starts table for the data 
    reportHTML += "<table> \
                <caption>"+race[i]+"</caption> \
                <tr><th>Candidate</th><th>Votes</th></tr>";
@@ -43,14 +43,14 @@ document.getElementsByTagName("section")[0].innerHTML = reportHTML;
 
 function candidateRows(raceNum, totalVotes){
    var rowHTML = "";
-
+//puts info for rows
    for(var j = 0; j<=2; j++){
       var candidateName = candidate[raceNum][j];
       var candidateParty = party[raceNum][j];
       var candidateVotes = votes[raceNum][j];
       var candidatePercent = calcPercent(candidateVotes, totalVotes);
-
-      rowHTML += "<tr> \
+//starts new row 
+      rowHTML += "<tr> \ 
                <td>"+candidateName+"("+candidateParty+")</td> \
                <td>"+ candidateVotes.toLocaleString() +"("+candidatePercent.toFixed(1)+")</td>" ;
                for(var k = 0; k<candidatePercent; k++){
@@ -69,7 +69,7 @@ function calcSum(value) {
 function calcPercent(value, sum) {
    return (100*value/sum);
 }
-function createBar(partyType){
+function createBar(partyType){ //creates function for createbar for td class
    var barHTML = "";
    switch(partyType){
    case 'D':

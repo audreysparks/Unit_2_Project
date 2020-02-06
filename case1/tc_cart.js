@@ -12,13 +12,14 @@
 	
 */
 var orderTotal = 0;
-
+//adds row for description
 
 var cartHTML = "<table> \
          <tr> \
          <th>Item</th><th>Description</th><th>Price</th><th>Qty</th><th>Total</th> \
          </tr>";
 
+         //info for descriptions 
 for(var i= 0; i<item.length; i++){
    cartHTML += "<tr> \
          <td><img src='tc_" + item[i] + ".png' alt='item' /></td> \
@@ -30,6 +31,7 @@ for(var i= 0; i<item.length; i++){
 
    orderTotal += itemCost;
 }
+//closes the tags
 cartHTML+= "<tr> \
          <td colspan='4'>Subtotal</td> \
          <td>$" + orderTotal + "</td> \

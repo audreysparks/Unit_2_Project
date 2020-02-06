@@ -11,6 +11,7 @@
    Filename: hg_report.js
 	
 */
+//add table for listings 
 var gameReport = "<h1>" + itemTitle + "</h1 \
              <h2>By:" + itemManufacturer + "</h2 \
              <img src='hg_" + itemID + ".png' alt='id' id='gameImg' /> \
@@ -32,7 +33,7 @@ var gameReport = "<h1>" + itemTitle + "</h1 \
  var ratingsAvg = ratingsSum/ratingsCount;
  var ratingReport = "<h1>Customer Reviews</h1> \
                 <h2>"+ratingsAvg+"out of 5 stars ("+ratingsCount+" reviews)</h2>";
-
+//add section for ratings area
  for(var i = 0; ratings[0,1,2]; i++){
     ratingReport+= "<div class='review'> \
                 <h1>"+ratingTitles+"</h1> \
