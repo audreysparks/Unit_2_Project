@@ -28,18 +28,41 @@
       
 */
 
+var donationTotal = 0;
+ donors.forEach(calcSum);
+ var summaryTable = "<table> \
+             <tr><th>Donors</th><td>"+donors.length+"</td></tr> \
+             <tr><th>Total Donations</th><td>$"+donationTotal.toLocaleString()+"</td></tr> \
+             </table>"
+ document.getElementById("donationSummary").innerHTML = summaryTable;
 
+ filter(findMajorDonors());
+ var majorDonors = [];
+//makes variable & donors array and filters 
+var majorDonors = donors.filter(findMajorDonors);
+// decending order
+majorDonors.sort(donorSortDescending);
 
+//adds the HTML code for a new table 
+//table that labels
+var donorTable = "<table> \
+         <caption>Major Donors</caption> \
+         <tr> \
+            <th>Donation</th><th>Donor ID</th> \
+            <th>Date</th><th>Name</th><th>Address</th> \
+            <th>Phone</th><th>E-Mail</th> \
+         </tr>";
+majorDonors.forEach(writeDonorRow);
+//closes table 
+donorTable += "</table>";
 
-
-
-
-
-
-
+// html with the id donorTable
+document.getElementById("donorTable").innerHTML = donorTable;
 function calcSum(donorAmt) {
    donationTotal += donorAmt[9];
 }
+
+
 
 function findMajorDonors(donorAmt) {
    return donorAmt[9] >= 1000;
@@ -60,27 +83,3 @@ function writeDonorRow(value) {
    donorTable += "<td>" + value[8] + "</td>";         
    donorTable += "</tr>";
 }
-
-var donationTable = [0];
-
-
-var summaryTable = "<table>" \
- "<tr><th>" + Donors + "</th></td>" \
- "<tr><th>" + Total Donations + "</th><td>"+$total+"</td></tr>" \
- "</table>" ;
-toLocaleString();
- document.getElementsByTagName("div").innerHTMl = donationSummary;
- summaryTable;
-
- filter();
- findMajor();
-
- var majorDonors = sort();
- donorSortDescending();
-
- var donorTable = "<table>" \
-  "<caption>" + Major Donors + "</caption>" \
-  "<tr>" 
-  "<th>" + Donation + "</th><th>" + Donor ID + "</th>" \
-  "<th>" + Date + "</th><th>" + Name "</th><th>" + Adress "</th>" \ 
-  "<th>"
