@@ -11,21 +11,32 @@
    Filename: tc_cart.js
 	
 */
+var orderTotal = 0;
 
-var orderTotal = [0];
 
-var cartHTML = "<table>" + "<tr>" + "<th>" + "item" + "</th>" + "<th>" + "Description" + "</th>" + "<th>" + "Price" + "</th>" + "<th>" + "Qty" + "</th>" + "<th>" + "Total" + "</th>" + "</tr>";
+var cartHTML = "<table> \
+         <tr> \
+         <th>Item</th><th>Description</th><th>Price</th><th>Qty</th><th>Total</th> \
+         </tr>";
 
- for(var i =0; i < cartHTML ; i ++){
-    cartHTML+="<tr>" + "<td>" + "<img src='tc_item.png' alt='item' />" + "</td>";
- }
- var cartHTML = "<td>" + "description" + "</td>" + "<td>" + "$price" + "</td>" + "<td>" + "quanity" + "</td>";
+for(var i= 0; i<item.length; i++){
+   cartHTML += "<tr> \
+         <td><img src='tc_" + item[i] + ".png' alt='item' /></td> \
+         <td>" + itemDescription[i] + "</td> \
+         <td>$" +itemPrice[i] + "</td> \
+         <td>" + itemQty[i] + "</td>";
+   var itemCost = itemPrice[i] * itemQty[i];
+   cartHTML += "<td>$" + itemCost + "</td></tr>";
 
- var itemCost = price() * quanity();
+   orderTotal += itemCost;
+}
+cartHTML+= "<tr> \
+         <td colspan='4'>Subtotal</td> \
+         <td>$" + orderTotal + "</td> \
+         </tr> \
+         </table>";
 
- var cartHTML = "<tr>" + "<td colspan= '4'>" + "subtotal" + "</td>" + "<td>" + "$total" + "</td>" + "</tr>" + "</table>";
-
- document.getElementById("cartHTML").innerHTML;
+document.getElementById("cart").innerHTML = cartHTML; 
 
 
 
